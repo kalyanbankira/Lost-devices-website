@@ -1,0 +1,1301 @@
+
+:root {
+    --accent: #FFDDDD;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    -webkit-text-size-adjust: 100%;
+    min-height: 100%;
+    background-color: #0f172a;      /* matches footer, so overscroll area blends in */
+}
+
+body {
+    background-color: #074c4d;
+    width: 100%;
+    min-height: 100vh;
+    min-height: 100dvh;
+    display: flex;
+    flex-direction: column;
+    overflow-x: hidden;
+    overflow-wrap: break-word;
+}
+
+body > * {
+    flex-shrink: 0;
+}
+
+img {
+    max-width: 100%;
+}
+
+/* =========================================================
+   Profile 1 (top logo)
+   ========================================================= */
+.main-logo {
+    margin-top: 20px;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+.main-profile {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 10px 20px;
+}
+
+.my-profile {
+    width: clamp(110px, 18vw, 200px);
+    aspect-ratio: 200 / 210;
+    border-radius: 100%;
+    background-image: url(whitecoder.png);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    margin-bottom: 10px;
+    flex-shrink: 0;
+}
+
+.profile-text {
+    min-width: 0;
+}
+
+.profile-text h1 {
+    font-size: clamp(1.75rem, 4vw, 2.5rem);
+    margin: 1px;
+    color: rgb(252, 252, 252);
+}
+
+.profile-text h2 {
+    font-size: clamp(1rem, 2vw, 1.5rem);
+    font-weight: normal;
+    color: #f0ecec;                 /* lighter for better contrast on teal */
+    overflow-wrap: anywhere;
+}
+
+/* =========================================================
+   Main container + navigation
+   ========================================================= */
+.main-container {
+    background-color: #074c4d;
+    width: 100%;
+    padding-top: 10px;
+}
+
+.nav-tools {
+    width: 100%;
+    min-height: 70px;
+    padding: 8px 12px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #f9ffff;
+    font-size: 18px;
+}
+
+.nav-buttons {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 10px 15px;
+}
+
+.nav-buttons a {
+    display: inline-block;
+    text-decoration: none;
+    font-weight: 900;
+    color: rgb(4, 11, 100);
+    padding: 8px 18px;
+    border-radius: 5px;
+    transition: background-color 0.3s, transform 0.3s;
+    cursor: pointer;
+}
+
+.nav-buttons a:hover {
+    background-color: var(--accent);
+    transform: translateY(-1px);
+}
+
+.brand {
+    display: flex;
+    align-items: center;
+    gap: 2px;
+}
+
+.light,
+.call,
+.notice {
+    width: 46px;
+    height: 48px;
+    flex-shrink: 0;
+    border-radius: 100%;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.light {
+    background-image: url(light.jpg);
+}
+
+.call {
+    background-image: url(call.jpg);
+}
+
+.notice {
+    background-image: url(notify2.jpg);
+}
+
+.brand-text {
+    color: rgb(0, 0, 0);
+    font-size: 25px;
+    font-weight: bold;
+}
+
+.main-call {
+    display: flex;
+    align-items: center;
+    gap: 2px;
+}
+
+.main-call-text {
+    display: block;
+    font-size: 18px;
+    font-weight: bold;
+    white-space: nowrap;
+    color: rgb(3, 1, 1);
+}
+
+.main-notice {
+    display: flex;
+    align-items: center;
+    gap: 1px;
+}
+
+#main-notice-div {
+    min-height: 40px;
+    min-width: 150px;
+    padding: 0 14px;
+    background-color: rgb(255, 0, 0);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+}
+
+.main-notice-text {
+    color: rgb(255, 255, 255);
+    font-size: 25px;
+    font-weight: bold;
+    white-space: nowrap;
+}
+
+/* =========================================================
+   Profile 2 + 3 (hero)
+   ========================================================= */
+.main-profile2 {
+    display: grid;
+    grid-template-columns: minmax(0, 1.3fr) minmax(0, 1fr);
+    align-items: center;
+    gap: 30px;
+    padding: 40px 20px 150px;   /* bottom space lets the 3 cards overlap */
+    color: rgb(138, 209, 5);
+}
+
+#intro-text {
+    font-size: clamp(1rem, 2.2vw, 1.5rem);
+    display: block;
+    line-height: 1.7;
+    color: #f3f0e7;
+}
+
+#best-place-text {
+    font-size: clamp(2.2rem, 6vw, 5rem);
+    line-height: 1.1;
+    margin-top: 0;
+    margin-left: clamp(0px, 4vw, 55px);
+    margin-bottom: 25px;
+    color: rgb(247, 241, 241);
+}
+
+.profile2-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    align-items: center;
+    width: 100%;
+}
+
+.profile2 {
+    flex: 0 1 clamp(220px, 30vw, 380px);
+    height: clamp(260px, 32vw, 400px);
+    margin-left: clamp(0px, 4vw, 55px);
+    background: url("profile2.jpg") center / cover no-repeat;
+    border-radius: 100px 100px 0 0;
+}
+
+.profile2-text {
+    flex: 1 1 260px;
+    min-width: 0;
+    text-align: justify;
+    line-height: 1.7;
+    letter-spacing: 0.4px;
+    margin-bottom: 15px;
+    border-radius: 10px;
+}
+
+.profile2-text ul {
+    margin-top: 12px;
+    padding-left: 22px;
+}
+
+.profile3-container {
+    width: 100%;
+    height: clamp(300px, 45vw, 550px);
+    background-image: url(profile3.jpg);
+    background-size: cover;
+    background-position: center;
+    border-radius: clamp(60px, 10vw, 150px);
+}
+
+/* =========================================================
+   Profile 4 (three cards)
+   ========================================================= */
+.three-div {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 300px));
+    justify-content: center;
+    gap: 25px;
+    margin: 0 clamp(16px, 4vw, 60px);
+}
+
+#profile4-one,
+#profile4-two,
+#profile4-three {
+    width: 100%;
+    min-height: 220px;
+    margin-top: -120px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 18px;
+    padding: 20px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+}
+
+#profile4-one {
+    background-color: white;
+    color: #333;
+}
+
+#profile4-two {
+    background-color: #c92a06;      /* slightly darker red for readable white text */
+    color: rgb(255, 255, 255);
+}
+
+#profile4-three {
+    background-color: rgb(255, 255, 255);
+    color: rgb(0, 0, 0);
+}
+
+.three-div h2 {
+    margin-bottom: 10px;
+    text-align: center;
+    font-size: clamp(1.2rem, 2vw, 1.5rem);
+}
+
+.three-div p {
+    text-align: center;
+    line-height: 1.5;
+}
+
+/* =========================================================
+   Profile 5
+   ========================================================= */
+.main-container-profile5 {
+    display: flex;                  /* was missing: needed for the row layout */
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    padding: 60px clamp(16px, 5vw, 80px);
+    background-color: rgba(220, 222, 103, 0.964);
+    gap: 20px;
+}
+
+.profile5-one {
+    flex: 1 1 0;
+    min-width: 0;
+    gap: 20px;
+    padding: 20px;
+    display: flex;
+    border-radius: 20px;
+    align-items: center;
+}
+
+#profile5-id-1 {
+    flex: 1 1 0;
+    min-width: 0;
+    aspect-ratio: 350 / 450;
+    background-image: url(profile2.jpg);
+    background-size: cover;
+    background-position: center;
+    border-radius: 150px 150px 0 0;
+}
+
+#profile5-id-12-main {
+    flex: 1 1 0;
+    min-width: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+#profile5-id-21,
+#profile5-id-22 {
+    border-radius: 150px;
+    background-size: cover;
+    background-position: center;
+}
+
+#profile5-id-21 {
+    width: 80%;
+    aspect-ratio: 260 / 300;
+    margin-left: 10%;
+    background-image: url(social.jpg);
+    border-radius: 100%;
+}
+
+#profile5-id-22 {
+    width: 75%;
+    aspect-ratio: 240 / 250;
+    margin-left: 10%;
+    background-image: url(youtube.jpg);
+    border-radius: 50px;
+}
+
+.profile5-two {
+    flex: 1 1 0;
+    min-width: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: clamp(20px, 3vw, 40px);
+    background-color: rgb(179, 231, 184);
+    border-radius: 20px;
+}
+
+.profile5-two h3 {
+    font-size: clamp(1.35rem, 2.6vw, 2rem);
+    line-height: 1.3;
+    margin-bottom: 15px;
+}
+
+.profile5-two p {
+    font-size: clamp(1rem, 1.5vw, 1.125rem);
+    line-height: 1.6;
+    margin-bottom: 30px;
+}
+
+.profile5-two1-main {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+#profile5-two1,
+#profile5-two2 {
+    flex: 1 1 130px;
+    max-width: 180px;
+    min-height: 110px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    border-radius: 20px;
+    font-weight: 600;
+    padding: 10px;
+}
+
+#profile5-two1 {
+    background: rgb(22, 164, 203);
+}
+
+#profile5-two2 {
+    background: rgb(152, 182, 5);
+}
+
+/* stats: now runs edge to edge (set margin-top/border-radius back
+   to 40px / 20px if you prefer the floating-pill look) */
+#profile5-main-in5 {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+    gap: 20px;
+    padding: 30px 20px;
+    background: #eebbbb;
+    color: rgb(197, 7, 7);
+    font-size: clamp(1.25rem, 3vw, 1.75rem);
+    margin-top: 0;
+    border-radius: 0;
+}
+
+#profile5-main-in5 div {
+    text-align: center;
+    font-weight: bold;
+}
+
+/* =========================================================
+   Profile 6
+   ========================================================= */
+.profile6-main {
+    background-color: #d69999;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    padding-bottom: 30px;
+}
+
+.profile6-heading h3 {
+    font-size: clamp(1.4rem, 3.5vw, 2.25rem);
+    font-weight: bold;
+    line-height: 1.2;
+    color: #111;
+    background-color: #cbd50f;
+    text-align: center;
+    padding: 12px 16px;
+}
+
+.profile-6-in {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    padding: 0 20px;
+}
+
+.profile-6-in div {
+    background-color: rgb(255, 0, 0);
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 15px;
+    min-height: 300px;
+    font-size: clamp(1rem, 1.5vw, 1.25rem);
+    font-weight: 600;
+}
+
+#serial-number {
+    background: #cbd50f;
+    flex: 1 1 160px;
+    max-width: 220px;
+}
+
+#create-account {
+    background: #0fb387;
+    flex: 2 1 260px;
+}
+
+#picture {
+    background-color: #ff0000;
+    flex: 2.5 1 280px;
+    background-image: url(youtube.jpg);
+    background-size: cover;
+    background-position: center;
+}
+
+/* =========================================================
+   Profile 7
+   ========================================================= */
+.profile7-container {
+    background-color: #f9f9f9;
+}
+
+.pics-view {
+    min-height: 90px;
+    width: 100%;
+    color: #047e47;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 15px 30px;
+    padding: 15px 20px;
+    background-color: white;
+    text-align: center;
+}
+
+.pics-view h1 {
+    font-size: clamp(1.5rem, 3.5vw, 2rem);
+}
+
+.pic-div {
+    height: 40px;
+    width: 40px;
+    flex-shrink: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #df258e;
+    border-radius: 100%;
+    font-size: 24px;
+    color: white;
+}
+
+.profile7-main {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    padding: 10px;
+    background-color: #ffffff;
+}
+
+#profile7-one,
+#profile7-two,
+#profile7-three {
+    flex: 1 1 220px;
+    max-width: 300px;
+    aspect-ratio: 3 / 4;
+    background-size: cover;
+    background-position: center;
+}
+
+#profile7-one {
+    background-color: #de1486;
+    background-image: url(pic1.jpg);
+}
+
+#profile7-two {
+    background-color: #0ab904;
+    background-image: url(pic2.jpg);
+}
+
+#profile7-three {
+    background-color: rgb(6, 136, 172);
+    background-image: url(pic3.png);
+}
+
+/* =========================================================
+   Profile 8
+   ========================================================= */
+.profile8-main {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: stretch;
+}
+
+.profile8-main21 {
+    flex: 1 1 50%;
+    min-width: 0;
+    background-color: #f3caef;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    gap: 20px;
+    justify-content: space-evenly;
+    padding: 30px 10px;
+}
+
+.profile8-pic1,
+.profile8-pic2 {
+    width: clamp(110px, 16vw, 200px);
+    aspect-ratio: 200 / 360;
+    background-color: rgb(6, 136, 172);
+    background-size: cover;
+    background-position: center;
+    border-radius: 150px;
+}
+
+.profile8-pic1 {
+    background-image: url(pic4.jpg);
+}
+
+.profile8-pic2 {
+    background-image: url(pic7.jpg);
+    margin-top: 25px;
+}
+
+.profile8-main22 {
+    flex: 1 1 50%;
+    min-width: 0;
+    background-color: #f3caef;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 20px;
+    padding: 30px;
+    line-height: 1.5;
+    text-align: left;
+    font-size: clamp(1rem, 1.6vw, 1.375rem);
+}
+
+/* =========================================================
+   Profile 9
+   ========================================================= */
+.profile9 {
+    min-height: 110px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 20px 16px;
+    background-color: red;
+    text-align: center;
+    font-size: 20px;
+    color: white;
+}
+
+.profile9 h2 {
+    font-size: clamp(1.3rem, 3vw, 1.75rem);
+}
+
+.profile9 h3 {
+    font-size: clamp(1rem, 2vw, 1.25rem);
+}
+
+/* =========================================================
+   Profile 10
+   ========================================================= */
+.profile10-main {
+    width: 100%;
+    background-color: #b8c5b7;
+    padding-bottom: 30px;
+}
+
+.profile10-main h1 {
+    text-align: center;
+    font-size: clamp(1.6rem, 4vw, 2.5rem);
+    font-weight: 500;
+    padding: 30px 20px;
+}
+
+.profile10-pic-div {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    gap: 20px;
+    padding: 0 20px;
+}
+
+#profile10-pic1,
+#profile10-pic2,
+#profile10-pic3,
+#profile10-pic4 {
+    width: clamp(120px, 20vw, 200px);
+    aspect-ratio: 200 / 390;
+    background-color: rgb(6, 136, 172);
+    background-size: cover;
+    background-position: center;
+    border-radius: 150px;
+}
+
+#profile10-pic1 { background-image: url(pic8.jpg); }
+#profile10-pic2 { background-image: url(pic10.jpg); }
+#profile10-pic3 { background-image: url(pic9.jpg); }
+#profile10-pic4 { background-image: url(pic12.jpg); }
+
+/* =========================================================
+   Profile 11
+   ========================================================= */
+.profile11-main {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    gap: 30px;
+    padding: 30px clamp(16px, 3vw, 40px);
+    font-weight : 600;
+}
+
+.profile11-main-in {
+    flex: 1 1 0;
+    min-width: 0;
+    color: #fcce00;
+}
+
+.profile11-heading-left {
+    text-align: left;
+    padding: 10px;
+    font-size: clamp(1rem, 1.5vw, 1.25rem);
+    margin-left: 0;
+    color: #fcce00;
+    font-weight : 600;
+}
+
+.profile11-heading-left h2 {
+    padding: 10px 0;
+    font-size: clamp(1.4rem, 3vw, 2rem);
+    color: #fcce00;
+}
+
+.profile11-divs {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 20px;
+    width: 100%;
+    margin: 10px 0 0;
+}
+
+.profile11-div1,
+.profile11-div2,
+.profile11-div3,
+.profile11-div4 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    font-size: clamp(1rem, 1.4vw, 1.125rem);
+    padding: 10px;
+}
+
+.profile11-pic-main {
+    flex: 0 1 45%;
+    min-width: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.profile11-pic1 {
+    width: 100%;
+    height: clamp(220px, 30vw, 350px);
+    background-image: url(pic16.jpg);
+    background-size: cover;
+    background-position: center;
+    border-radius: 380px 380px 0 0;
+}
+
+.profile11-pic2-main {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+#profile11-pic3,
+#profile11-pic4 {
+    width: clamp(100px, 14vw, 200px);
+    aspect-ratio: 1 / 1;
+    background-size: cover;
+    background-position: center;
+    border-radius: 100%;
+}
+
+#profile11-pic3 { background-image: url(pic14.jpg); }
+#profile11-pic4 { background-image: url(pic13.jpg); }
+
+/* =========================================================
+   Profile 12
+   ========================================================= */
+.profile12-main {
+    min-height: 550px;
+    width: 100%;
+    background-color: #c5e1e8;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+    padding: 30px 20px;
+}
+
+.profile12-divs {
+    flex: 1 1 50%;
+    min-width: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #c5e1e8;
+}
+
+.profile12-div1,
+.profile12-div2,
+.profile12-div3 {
+    width: 100%;
+    min-height: 150px;
+    padding: 15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    font-size: clamp(1.1rem, 2.2vw, 1.5rem);
+    font-weight: 600;
+    color: #a50202;
+}
+
+.profile12-divs p {
+    font-size: clamp(1rem, 1.4vw, 1.125rem);
+    overflow-wrap: anywhere;
+}
+
+.profile12-div4 {
+    flex: 1 1 50%;
+    min-width: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+.profile12-div41 {
+    width: clamp(200px, 30vw, 300px);
+    aspect-ratio: 1 / 1;
+    background-image: url(pic16.jpg);
+    background-size: cover;
+    background-position: center;
+    transform: rotate(-20deg);
+    border-radius: 12px;
+    overflow: hidden;
+}
+
+/* =========================================================
+   Profile 13
+   ========================================================= */
+.profile13-main {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.profile13-inside {
+    width: 100%;
+    background-color: #e3cece;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-items: flex-start;
+    gap: 25px;
+    padding: 30px 20px;
+    text-align: center;
+    color :#0b5172;
+}
+
+.profile13-inside p {
+    font-size: clamp(1rem, 1.6vw, 1.375rem);
+}
+
+.profile13-inside h3 {
+    font-size: clamp(1.15rem, 2vw, 1.5625rem);
+    font-weight: 700;
+    margin-bottom: 6px;
+    color: #113d4b;
+}
+
+.profile13-div1,
+.profile13-div2,
+.profile13-div3 {
+    flex: 1 1 260px;
+    max-width: 500px;
+    min-width: 0;
+}
+
+.profile13-main-div2 {
+    min-height: 200px;
+    width: 100%;
+    padding: 25px 20px;
+    background-color: #175546;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    font-size: clamp(1.1rem, 2.5vw, 1.875rem);
+    font-weight: 600;
+    color: white;
+}
+
+.profile13-main-div2 p {
+    color: white;
+    margin-top: 6px;
+}
+
+/* =========================================================
+   Footer (grows to fill any leftover screen height)
+   ========================================================= */
+footer {
+    flex: 1 0 auto;
+    width: 100%;
+    padding: 0 0 22px;          /* no side padding: green block touches both edges */
+    text-align: center;
+    color: #ffffff;
+    background: #0f172a;
+    border-top: 1px solid rgba(255, 255, 255, 0.12);
+}
+
+footer .social-links h3 {
+    flex: 0 0 100%;
+    margin: 20px 0 8px;
+    color: #faf8f8;
+    font-size: 1.2rem;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+footer .social-links {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 12px;
+    margin-bottom: 22px;
+    padding: 10px 20px 0;       /* side spacing moved here from the footer */
+}
+
+footer .social-links a {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 9px;
+    padding: 11px 16px;
+    color: #ffffff;
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    border-radius: 30px;
+    text-decoration: none;
+    font-size: 0.9rem;
+    font-weight: 600;
+    transition: transform 0.25s ease,
+                background-color 0.25s ease,
+                border-color 0.25s ease;
+}
+
+footer .social-links a img {
+    width: 18px;
+    height: 18px;
+    filter: invert(100%);
+}
+
+footer .facebook  { background-color: #1877f2; }
+footer .instagram { background-color: #c13584; }
+footer .twitter   { background-color: #0284c7; }
+footer .linkedin  { background-color: #0a66c2; }
+footer .youtube   { background-color: #dc2626; }
+footer .telegram   { background-color: #0284c7; }
+
+footer .social-links a:hover {
+    transform: translateY(-3px);
+    border-color: rgba(255, 255, 255, 0.5);
+}
+
+footer p {
+    margin-top: 10px;
+    padding: 0 20px;
+    color: #94a3b8;
+    font-size: 0.88rem;
+}
+
+/* =========================================================
+   Breakpoints
+   ========================================================= */
+
+/* Very large screens (also 25% browser zoom): backgrounds stay full width,
+   only the inner content is kept to a 1600px column via side padding */
+@media (min-width: 1600px) {
+    .main-profile2 {
+        padding-inline: max(20px, calc((100% - 1600px) / 2));
+    }
+
+    .main-container-profile5 {
+        padding-inline: max(80px, calc((100% - 1600px) / 2));
+    }
+
+    .profile11-main {
+        padding-inline: max(40px, calc((100% - 1600px) / 2));
+    }
+}
+
+/* Profile 5: stack earlier so the two halves never get cramped */
+@media (max-width: 1200px) {
+    .main-container-profile5 {
+        flex-direction: column;
+        align-items: stretch;
+        padding: 40px 20px;
+    }
+
+    .profile5-one,
+    .profile5-two {
+        width: 100%;
+        flex: 0 0 auto;
+    }
+
+    .profile5-one {
+        max-width: 700px;
+        margin: 0 auto;
+    }
+}
+
+/* Tablets and small laptops */
+@media (max-width: 960px) {
+    /* hero: stack text above the big picture */
+    .main-profile2 {
+        grid-template-columns: minmax(0, 1fr);
+        padding: 30px 20px 40px;
+    }
+
+    #best-place-text,
+    .profile2 {
+        margin-left: 0;
+    }
+
+    /* cards: single column, no overlap */
+    .three-div {
+        grid-template-columns: minmax(0, 480px);
+        margin-top: 10px;
+        margin-bottom: 30px;
+    }
+
+    #profile4-one,
+    #profile4-two,
+    #profile4-three {
+        margin-top: 0;
+    }
+
+    /* profile 5 (stacking already handled at 1200px) */
+    .profile5-one {
+        max-width: 640px;
+    }
+
+    /* profile 8 */
+    .profile8-main {
+        flex-direction: column;
+    }
+
+    .profile8-main21,
+    .profile8-main22 {
+        flex: 0 0 auto;
+        width: 100%;
+    }
+
+    .profile8-main22 {
+        text-align: center;
+    }
+
+    /* profile 11 */
+    .profile11-main {
+        flex-direction: column;
+    }
+
+    .profile11-main-in,
+    .profile11-pic-main {
+        flex: 0 0 auto;
+        width: 100%;
+    }
+
+    .profile11-pic-main {
+        max-width: 520px;
+    }
+
+    /* profile 12 */
+    .profile12-main {
+        flex-direction: column;
+        min-height: 0;
+    }
+
+    .profile12-divs,
+    .profile12-div4 {
+        flex: 0 0 auto;
+        width: 100%;
+    }
+
+    .profile12-div1,
+    .profile12-div2,
+    .profile12-div3 {
+        min-height: 120px;
+    }
+}
+
+/* Phones */
+@media (max-width: 600px) {
+    .main-logo {
+        margin-left: 12px;
+    }
+
+    .main-profile {
+        justify-content: center;
+        text-align: center;
+    }
+
+    .nav-tools {
+        padding: 10px 8px;
+    }
+
+    .nav-buttons {
+        gap: 8px 6px;
+    }
+
+    .nav-buttons a {
+        padding: 8px 12px;
+        font-size: 16px;
+    }
+
+    .brand,
+    .main-call,
+    .main-notice {
+        width: 100%;
+        justify-content: center;
+    }
+
+    .brand-text {
+        font-size: 22px;
+    }
+
+    .main-call-text {
+        font-size: 16px;
+    }
+
+    .main-notice-text {
+        font-size: 20px;
+    }
+
+    .profile2-text {
+        text-align: left;
+        flex-basis: 100%;
+    }
+
+    .profile2 {
+        flex: 1 1 100%;
+        height: clamp(240px, 70vw, 360px);
+        border-radius: 80px 80px 0 0;
+    }
+
+    .profile11-divs {
+        grid-template-columns: minmax(0, 1fr);
+    }
+
+    .profile5-one {
+        padding: 10px 0;
+        gap: 12px;
+    }
+
+    #profile5-two1,
+    #profile5-two2 {
+        max-width: none;
+    }
+
+    #serial-number {
+        max-width: none;
+        flex-basis: 100%;
+        min-height: 120px;
+    }
+
+    #create-account {
+        flex-basis: 100%;
+        min-height: 160px;
+    }
+
+    #picture {
+        flex-basis: 100%;
+        min-height: 220px;
+    }
+
+    #profile7-one,
+    #profile7-two,
+    #profile7-three {
+        flex-basis: 100%;
+        max-width: 340px;
+    }
+
+    .profile8-main21 {
+        gap: 12px;
+    }
+
+    .profile8-main22 {
+        padding: 24px 18px;
+    }
+
+    .profile12-div41 {
+        margin: 15px 0;
+    }
+
+    footer {
+        padding: 0 0 20px;
+    }
+
+    footer .social-links {
+        gap: 10px;
+    }
+
+    footer .social-links a {
+        padding: 10px 13px;
+        font-size: 0.85rem;
+    }
+}
+
+/* Very small phones */
+@media (max-width: 380px) {
+    #best-place-text {
+        font-size: 2rem;
+    }
+
+    .profile3-container {
+        height: 260px;
+    }
+
+    #profile10-pic1,
+    #profile10-pic2,
+    #profile10-pic3,
+    #profile10-pic4 {
+        width: 130px;
+    }
+}
+
+/* Phones turned sideways */
+@media (max-height: 520px) and (orientation: landscape) {
+    footer .social-links {
+        padding-top: 0;
+    }
+}
+
+/* Touch devices: no sticky hover effects */
+@media (hover: none) {
+    .nav-buttons a:hover,
+    footer .social-links a:hover {
+        transform: none;
+    }
+}
+
+/* Print */
+@media print {
+    footer .social-links {
+        display: none;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    * {
+        transition: none !important;
+        animation: none !important;
+    }
+}

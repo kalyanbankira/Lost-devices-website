@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Login</title>
+  <link rel="stylesheet" href="login.css" />
+</head>
+
+<body>
+  <div class="login-container">
+    <img id="avatar" src="avatar-open.png" alt="Avatar" class="avatar" />
+
+    <form class="login-form">
+      <div>
+        <label for="email">Email</label>
+        <input type="email" id="email" placeholder="domain@gmail.com" required />
+      </div>
+
+      <div>
+        <label for="password">Password</label>
+        <div class="password-wrapper">
+          <input type="password" id="password" required />
+        </div>
+      </div>
+
+      <label class="show-password">
+        <input type="checkbox" onclick="togglePassword()" /> Show Password
+      </label>
+
+
+      <div class="forget-sign">
+        <a href="#" class="forget">Forgot Password?</a>
+        <a href="register.html" class="sign-in">Sign Up</a>
+      </div>
+
+      <button type="submit" class="login-button">Log In</button>
+    </form>
+    
+  </div>
+
+  <script>
+    const passwordInput = document.getElementById("password");
+    const avatar = document.getElementById("avatar");
+
+    passwordInput.addEventListener("focus", () => {
+      avatar.src = "avatar-closed.png";
+    });
+
+    passwordInput.addEventListener("blur", () => {
+      avatar.src = "avatar-open.png";
+    });
+
+    function togglePassword() {
+      passwordInput.type = passwordInput.type === "password" ? "text" : "password";
+    }
+  </script>
+<footer>
+    <section class="social-links">
+      <h3>🌐 Follow Us</h3>
+      <a href="https://facebook.com/" target="_blank" class="facebook">
+        <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/facebook.svg" alt="Facebook" />
+        Facebook
+      </a>
+      <a href="https://instagram.com/" target="_blank" class="instagram">
+        <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/instagram.svg" alt="Instagram" />
+        Instagram
+      </a>
+      <a href="https://twitter.com/" target="_blank" class="twitter">
+        <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/twitter.svg" alt="Twitter" />
+        Twitter
+      </a>
+      <a href="https://linkedin.com/" target="_blank" class="linkedin">
+        <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/linkedin.svg" alt="LinkedIn" />
+        LinkedIn
+      </a>
+      <a href="https://youtube.com/" target="_blank" class="youtube">
+        <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/youtube.svg" alt="YouTube" />
+        YouTube
+      </a>
+    </section>
+    <p>&copy; 2025 Python Classes. All rights reserved.</p>
+  </footer>
+</body>
+
+</html>

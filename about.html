@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Findback – we find your lost device, you pay only if we do</title>
+<meta name="description" content="Verified lost-device recovery. No find, no fee.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@500;700;800&family=Instrument+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="about.css">
+</head>
+<body>
+
+<header class="top">
+  <a class="brand" href="#">Findback</a>
+  <nav aria-label="Main">
+    <a href="#how">How it works</a>
+    <a href="#pricing">Pricing</a>
+    <a href="#faq">FAQ</a>
+    <a class="btn small" href="#start">Report a lost device</a>
+  </nav>
+</header>
+
+<main>
+  <section class="hero">
+    <div class="hero-text">
+      <h1>Lost your phone or laptop? We search. You pay only if we find it.</h1>
+      <p class="lead">Findback verifies you own the device, runs the search with you, and helps you get it back safely. If we don't recover it, you pay nothing.</p>
+      <p><a class="btn" href="#start">Report a lost device</a></p>
+      <p class="note">We never ask for your account passwords.</p>
+    </div>
+    <div class="radar" role="img" aria-label="Radar showing a lost phone being located">
+      <span class="ring r1"></span><span class="ring r2"></span><span class="ring r3"></span>
+      <span class="dot"></span>
+      <span class="tag">Your phone</span>
+    </div>
+  </section>
+
+  <section id="how" class="block">
+    <h2>How a case works</h2>
+    <ol class="steps">
+      <li><h3>Register and verify yourself</h3><p>Create your account with a government ID, a selfie, and codes sent to your phone and email.</p></li>
+      <li><h3>Add your device details</h3><p>Give the make, model, IMEI or serial number, proof of purchase, and where and when you lost it.</p></li>
+      <li><h3>Sign the agreement online</h3><p>Read the terms and e-sign them. This authorises us to work on your case.</p></li>
+      <li><h3>Set up the refundable hold</h3><p>A card hold is placed. It is charged only if the device is recovered.</p></li>
+      <li><h3>Start the search</h3><p>You sign in on Google's or Apple's own page to mark the device lost. We never see or store your password.</p></li>
+      <li><h3>Follow your case</h3><p>See the last known location and every action taken, in one place.</p></li>
+      <li><h3>Get it back safely</h3><p>We guide the handover to a public place, a verified drop-off point, or with police help.</p></li>
+      <li><h3>Confirm and pay</h3><p>Confirm you have the device. The fee is charged. If it wasn't recovered, the hold is released.</p></li>
+    </ol>
+  </section>
+
+  <section id="pricing" class="block pricing">
+    <h2>No find, no fee</h2>
+    <dl>
+      <div><dt>Opening a case</dt><dd>Free. A refundable hold is placed on your card.</dd></div>
+      <div><dt>Device recovered</dt><dd>You pay the success fee, set as a flat amount or a share of the device's value.</dd></div>
+      <div><dt>Device not recovered</dt><dd>The hold is released. You pay nothing.</dd></div>
+    </dl>
+    <p class="note">Recovery depends on the device's condition. We never promise a result, and our terms define exactly what counts as success.</p>
+  </section>
+
+  <section id="start" class="block">
+    <h2>Open your case</h2>
+    <p class="lead">Three steps: verify yourself, describe the device, and sign the agreement. The search starts only after all three.</p>
+    <ol class="progress" id="progress" aria-label="Progress">
+      <li class="on">1. Verify yourself</li><li>2. Device details</li><li>3. Sign agreement</li>
+    </ol>
+    <form id="caseForm" novalidate>
+      <fieldset data-step="1">
+        <legend>Step 1: verify yourself</legend>
+        <label>Full name (as on your ID)<input name="name" type="text" autocomplete="name" required></label>
+        <label>Date of birth<input name="dob" type="date" required></label>
+        <div class="otp">
+          <label>Phone number<input name="phone" type="tel" autocomplete="tel" required></label>
+          <button class="btn ghost" type="button" data-send="phone">Send code</button>
+          <label>Phone code<input name="phoneOtp" type="text" inputmode="numeric" maxlength="6" disabled></label>
+        </div>
+        <div class="otp">
+          <label>Email<input name="email" type="email" autocomplete="email" required></label>
+          <button class="btn ghost" type="button" data-send="email">Send code</button>
+          <label>Email code<input name="emailOtp" type="text" inputmode="numeric" maxlength="6" disabled></label>
+        </div>
+        <label>ID type
+          <select name="idType" required><option value="">Choose one</option><option>Government photo ID</option><option>Passport</option><option>Driving licence</option></select>
+        </label>
+        <label>Photo of your ID<input name="idFile" type="file" accept="image/*,.pdf" required></label>
+        <label>Selfie holding your ID<input name="selfie" type="file" accept="image/*" capture="user" required></label>
+      </fieldset>
+
+      <fieldset data-step="2" hidden>
+        <legend>Step 2: device details</legend>
+        <label>Device type
+          <select name="type" required><option value="">Choose one</option><option>Phone</option><option>Laptop</option><option>Tablet</option><option>Earbuds</option><option>Smartwatch</option><option>Other</option></select>
+        </label>
+        <label>Brand and model<input name="model" type="text" placeholder="e.g. Samsung Galaxy A54" required></label>
+        <label>IMEI or serial number<input name="imei" type="text" required></label>
+        <label>Colour and identifying marks<input name="marks" type="text" required></label>
+        <label>Purchase date<input name="bought" type="date" required></label>
+        <label>Invoice or box photo showing the IMEI/serial<input name="proof" type="file" accept="image/*,.pdf" required></label>
+        <label>Account on the device
+          <select name="account" required><option value="">Choose one</option><option>Google</option><option>Apple</option><option>Samsung</option><option>Microsoft</option><option>Other</option></select>
+        </label>
+        <label>Where did you last have it?<input name="place" type="text" required></label>
+        <label>When did you last have it?<input name="when" type="datetime-local" required></label>
+        <label>What happened?
+          <select name="how" required><option value="">Choose one</option><option>Lost or left behind</option><option>Possibly stolen</option><option>Not sure</option></select>
+        </label>
+        <label>Anything else that helps<textarea name="notes" rows="3"></textarea></label>
+        <p class="note">Don't enter any passwords here.</p>
+      </fieldset>
+
+      <fieldset data-step="3" hidden>
+        <legend>Step 3: sign the agreement</legend>
+        <div class="terms" tabindex="0" aria-label="Terms and conditions">
+          <h3>Service agreement</h3>
+          <p>1. You confirm that the details and documents you gave are true and that you own the device.</p>
+          <p>2. You authorise us to search for the device on your behalf and to contact the police if needed.</p>
+          <p>3. Success means the device is located and you confirm you have it back. The fee is charged only then.</p>
+          <p>4. We never ask for or store your account passwords. You sign in on the provider's own page.</p>
+          <p>5. We use your documents only to verify you and handle your case, and delete or archive them when it closes.</p>
+          <p>6. False claims can lead to cancellation of the case and a report to the authorities.</p>
+          <p class="note">Placeholder text. Have a lawyer review it before launch.</p>
+        </div>
+        <label class="check"><input type="checkbox" name="agree" required> I have read and accept the agreement.</label>
+        <label>Type your full name as your signature<input name="sigName" type="text" required></label>
+        <div class="sig">
+          <span>Or draw your signature</span>
+          <canvas id="sigPad" width="480" height="140" aria-label="Signature pad"></canvas>
+          <button class="btn ghost" type="button" id="sigClear">Clear signature</button>
+        </div>
+        <p class="note">Signed on <span id="signDate"></span></p>
+      </fieldset>
+
+      <p class="error" id="formError" role="alert" hidden></p>
+      <div class="nav">
+        <button class="btn ghost" type="button" id="backBtn" hidden>Back</button>
+        <button class="btn" type="button" id="nextBtn">Continue</button>
+      </div>
+    </form>
+    <div id="done" class="done" hidden tabindex="-1">
+      <h3>Agreement signed and case opened</h3>
+      <p>Your case number is <strong id="caseNo"></strong>. Our team will review your documents and contact you before the search starts.</p>
+    </div>
+  </section>
+
+  <section id="faq" class="block">
+    <h2>Questions</h2>
+    <details><summary>Do you need my account password?</summary><p>No. You sign in on Google's or Apple's own page. We never see or store your password.</p></details>
+    <details><summary>Why do you verify my identity?</summary><p>It keeps fraudsters from claiming devices that aren't theirs, and it protects you.</p></details>
+    <details><summary>What happens to my documents?</summary><p>We keep only what verification needs, store it encrypted, and delete or archive it when your case closes.</p></details>
+    <details><summary>What if the device can't be found?</summary><p>You owe nothing. Your card hold is released.</p></details>
+  </section>
+</main>
+
+<footer>
+  <p>© <span id="year"></span> Findback. Verified lost-device recovery.</p>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>

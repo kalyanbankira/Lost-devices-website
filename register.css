@@ -1,0 +1,365 @@
+:root {
+  --navy: #c8d9d9;
+  --navy-dark: #091b30;
+  --bg: #0856a4;
+  --card: #f8fafa;
+  --text: #000000;
+  --border: #c9d3dd;
+
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  font-family: "Segoe UI", system-ui, -apple-system, Roboto, Arial, sans-serif;
+  color: var(--text);
+  background: #188e96;
+  line-height: 1.5;
+}
+
+/* Header */
+.header1 {
+  background: #0d6a69;
+  color: #ffffff;
+  padding: 1.5rem 1rem;
+  text-align: center;
+}
+
+.header1 h1 {
+  margin: 0;
+  font-size: clamp(1.25rem, 3vw, 1.9rem);
+  font-weight: 600;
+  letter-spacing: 0.02em;
+}
+
+/* Main layout */
+.div_main {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 2.5rem 1rem;
+}
+
+main {
+  width: 100%;
+  max-width: 420px;
+}
+
+.form-section {
+  background: #0d6a69;
+  border: 1px solid #BEDeff;
+  border-radius: 10px;
+  padding: 2rem 1.75rem;
+  box-shadow: 0 6px 24px rgba(231, 232, 233, 0.08);
+}
+
+.user-reg {
+  margin: 0 0 1.5rem;
+  text-align: center;
+  font-size: 1.8rem;
+  color: #fffefe;
+}
+
+/* Form */
+form > div {
+  margin-bottom: 1.1rem;
+}
+
+label {
+  display: block;
+  margin-bottom: 0.35rem;
+  font-size: 1rem;
+  font-weight: 800;
+  color: white;
+}
+
+input {
+  width: 100%;
+  padding: 0.7rem 0.85rem;
+  font-size: 1rem;
+  font-family: inherit;
+  color: #000404;
+  background: #ffffff;
+  border: 1px solid #BEDeff;
+  border-radius: 6px;
+  transition: border-color 0.15s, box-shadow 0.15s;
+}
+
+input:focus {
+  outline: none;
+  border-color: #b85c0c;
+  box-shadow: 0 0 0 3px rgba(14, 138, 125, 0.25);
+}
+
+input:user-invalid {
+  border-color: var(--error);
+}
+
+.hint {
+  display: block;
+  margin-top: 0.3rem;
+  font-size: 0.8rem;
+  color: #BEDeff;
+}
+
+.btn {
+  width: 100%;
+  margin-top: 0.5rem;
+  padding: 0.8rem 1rem;
+  font-size: 1rem;
+  font-weight: 600;
+  font-family: inherit;
+  color: #0413a1;
+  background: #BEDeff;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background 0.15s;
+}
+
+.btn:hover {
+  background: #B7D894;
+}
+
+.btn:focus-visible {
+  outline: 3px solid #ffffff;
+  outline-offset: 2px;
+}
+
+.login-link {
+  text-align: center;
+  margin: 1.25rem 0 0;
+  font-size: 0.95rem;
+  color: #290044;
+}
+
+a {
+  color: #ffffff;
+}
+
+a:hover {
+  color: #c76a0d;
+}
+
+
+/* ---------- Footer ---------- */
+footer {
+    padding: 30px 20px 22px;
+    text-align: center;
+    color: #cbd5e1;
+    background: #0d6a69;
+    border-top: 1px solid rgba(255, 255, 255, 0.12);
+}
+
+footer .social-links h3 {
+    margin-bottom: 20px;
+    color: #ffffff;
+    font-size: 1.2rem;
+    font-weight: 600;
+}
+
+footer .social-links {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 12px;
+    margin-bottom: 22px;
+}
+
+footer .social-links a {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 9px;
+    padding: 11px 16px;
+    color: #ffffff;
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    border-radius: 30px;
+    text-decoration: none;
+    font-size: 0.9rem;
+    font-weight: 600;
+    transition: transform 0.25s ease,
+                background-color 0.25s ease,
+                border-color 0.25s ease;
+}
+
+footer .social-links a img {
+    width: 18px;
+    height: 18px;
+    filter: invert(100%);
+}
+
+footer .facebook {
+    background-color: #1877f2;
+}
+
+footer .instagram {
+    background-color: #c13584;
+}
+
+footer .twitter {
+    background-color: #0284c7;
+}
+
+footer .linkedin {
+    background-color: #0a66c2;
+}
+
+footer .youtube {
+    background-color: #dc2626;
+}
+
+footer .social-links a:hover {
+    transform: translateY(-3px);
+    border-color: rgba(255, 255, 255, 0.5);
+}
+
+footer p {
+    margin-top: 10px;
+    color: #94a3b8;
+    font-size: 0.88rem;
+}
+
+/* 10. Entrance Animation */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(18px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* 11. Tablet & Mobile Responsive */
+@media (max-width: 600px) {
+    .header1 {
+        padding: 22px 15px;
+    }
+
+    .div_main {
+        padding: 35px 16px;
+    }
+
+    .form-section {
+        padding: 30px 22px;
+        border-radius: 16px;
+    }
+
+    .form-section h2 {
+        font-size: 1.55rem;
+    }
+
+    footer {
+        padding: 25px 14px;
+    }
+
+    footer .social-links {
+        gap: 10px;
+    }
+
+    footer .social-links a {
+        padding: 10px 13px;
+        font-size: 0.85rem;
+    }
+}
+
+/* =========================================================
+   Breakpoints
+   ========================================================= */
+
+/* Very small phones (320px and under) */
+@media (max-width: 360px) {
+  .login-container {
+    width: calc(100% - 1.25rem);
+  }
+
+  .forget-sign {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0;
+  }
+}
+
+/* Tablets and up: slightly roomier card */
+@media (min-width: 768px) {
+  .login-container {
+    margin-top: calc(var(--avatar) / 2 + 2.5rem);
+  }
+
+  .login-form label {
+    font-size: 0.95rem;
+  }
+}
+
+/* Large desktops and TVs: scale everything up together */
+@media (min-width: 1440px) {
+  html {
+    font-size: 112.5%;
+  }
+}
+
+@media (min-width: 2200px) {
+  html {
+    font-size: 150%;
+  }
+}
+
+/* Phones turned sideways: very little vertical space */
+@media (max-height: 520px) and (orientation: landscape) {
+  :root {
+    --avatar: 4rem;
+    --gap: 0.65rem;
+    --pad: 1rem;
+  }
+
+  .login-container {
+    margin-bottom: 1rem;
+    min-height: 0;
+  }
+
+  footer {
+    padding-top: 1rem;
+  }
+}
+
+/* Touch devices: no sticky hover colors */
+@media (hover: none) {
+  .login-button:hover {
+    background: var(--yellow);
+  }
+
+  .login-form input:hover {
+    border-color: var(--line);
+  }
+}
+
+/* Print */
+@media print {
+  footer,
+  .show-password {
+    display: none;
+  }
+
+  .login-container {
+    box-shadow: none;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  * {
+    transition: none !important;
+  }
+}

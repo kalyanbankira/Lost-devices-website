@@ -1,0 +1,270 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 25px 15px;
+    font-family: Arial, sans-serif;
+    background: #074c4d;
+}
+
+/* Login form */
+
+.login-form {
+    width: 100%;
+    max-width: 430px;
+    padding: 30px;
+    background: #ffffff;
+    border-radius: 15px;
+    box-shadow: 0 10px 35px rgba(0, 0, 0, 0.3);
+}
+
+.login-form h2 {
+    text-align: center;
+    color: #172554;
+    font-size: 28px;
+    margin-bottom: 8px;
+}
+
+.sub {
+    text-align: center;
+    color: #000000;
+    font-size: 13px;
+    margin-bottom: 25px;
+}
+
+/* Labels */
+
+.login-form > label:not(.show-password) {
+    display: block;
+    font-size: 14px;
+    font-weight: 600;
+    color: #0011ff;
+    margin-bottom: 7px;
+    margin-top: 15px;
+}
+
+/* Input fields */
+
+.login-form input:not([type="checkbox"]) {
+    width: 100%;
+    height: 43px;
+    padding: 10px 12px;
+    border: 1px solid #ccc;
+    border-radius: 7px;
+    outline: none;
+    font-size: 14px;
+    background: #F7F4ED;
+    transition: 0.3s;
+}
+
+.login-form input:focus {
+    border-color: #2563eb;
+    background: #ffffff;
+    box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.12);
+}
+
+/* Mobile number */
+
+.mobile-row {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.prefix {
+    height: 43px;
+    min-width: 52px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid #ccc;
+    border-radius: 7px;
+    background: #eee;
+    font-weight: bold;
+}
+
+.mobile-row input {
+    flex: 1;
+    min-width: 0;
+}
+
+/* Password */
+
+.show-password {
+    display: flex;
+    align-items: center;
+    gap: 7px;
+    margin-top: 10px;
+    font-size: 13px;
+    color: #0d667c;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.show-password input {
+    cursor: pointer;
+}
+
+/* CAPTCHA */
+
+.captcha-row {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 10px;
+}
+
+.captcha-box {
+    flex: 1;
+    height: 48px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #e5e7eb;
+    color: #172554;
+    font-size: 24px;
+    font-weight: bold;
+    letter-spacing: 7px;
+    font-style: italic;
+    text-decoration: line-through;
+    border-radius: 7px;
+    user-select: none;
+}
+
+.icon-btn {
+    height: 43px;
+    width: 45px;
+    border: none;
+    border-radius: 7px;
+    background: #2563eb;
+    color: white;
+    font-size: 25px;
+    cursor: pointer;
+}
+
+.icon-btn:hover {
+    background: #1d4ed8;
+}
+
+.captcha-input {
+    margin-top: 2px;
+}
+
+/* OTP */
+
+.otp-row {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.otp-row input {
+    flex: 1;
+    min-width: 0;
+}
+
+.otp-btn {
+    height: 43px;
+    padding: 0 13px;
+    border: none;
+    border-radius: 7px;
+    background: #0f766e;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+    white-space: nowrap;
+}
+
+.otp-btn:hover {
+    background: #115e59;
+}
+
+.otp-btn:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+}
+
+/* Error messages */
+
+.msg {
+    min-height: 15px;
+    margin-top: 4px;
+    font-size: 12px;
+}
+
+.msg.error {
+    color: #dc2626;
+}
+
+.msg.success {
+    color: #15803d;
+}
+
+/* Forgot password and signup */
+
+.forget-sign {
+    display: flex;
+    justify-content: space-between;
+    margin: 18px 0;
+    font-size: 13px;
+}
+
+.forget-sign a {
+    text-decoration: none;
+    color: #006e4a;
+    font-weight: 600;
+}
+
+.forget-sign a:hover {
+    text-decoration: underline;
+}
+
+/* Login button */
+
+.login-button {
+    width: 100%;
+    height: 46px;
+    border: none;
+    border-radius: 8px;
+    background: #2563eb;
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.login-button:hover {
+    background: #1d4ed8;
+    transform: translateY(-1px);
+}
+
+/* Mobile responsive */
+
+@media (max-width: 480px) {
+    .login-form {
+        padding: 22px 18px;
+    }
+
+    .login-form h2 {
+        font-size: 25px;
+    }
+
+    .captcha-box {
+        font-size: 20px;
+        letter-spacing: 5px;
+    }
+
+    .otp-btn {
+        padding: 0 9px;
+        font-size: 12px;
+    }
+}

@@ -1,0 +1,161 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Office Registration</title>
+    <link rel="stylesheet" href="admin_reg.css">
+</head>
+
+<body>
+
+    <form class="register-form" id="registerForm" novalidate>
+
+        <h2>Office Registration</h2>
+
+        <p class="sub">
+            Create your account. You will use your email and password to log in.
+        </p>
+
+        <!-- Full Name -->
+        <label for="fullName">Full Name</label>
+        <input
+            type="text"
+            id="fullName"
+            autocomplete="name"
+            placeholder="As on your office records"
+            required
+        />
+        <p class="msg" id="nameMsg"></p>
+
+        <!-- Aadhaar -->
+        <label for="aadhaar">Aadhaar Number</label>
+        <input
+            type="text"
+            id="aadhaar"
+            inputmode="numeric"
+            maxlength="14"
+            placeholder="XXXX XXXX XXXX"
+            autocomplete="off"
+            required
+        />
+        <p class="msg" id="aadhaarMsg"></p>
+
+        <!-- Email -->
+        <label for="email">Email ID</label>
+        <input
+            type="email"
+            id="email"
+            autocomplete="email"
+            placeholder="name@company.com"
+            required
+        />
+        <p class="msg" id="emailMsg"></p>
+
+        <!-- Date of Birth -->
+        <label for="dob">Date of Birth</label>
+        <input
+            type="date"
+            id="dob"
+            name="dob"
+            autocomplete="bday"
+            required
+        />
+        <p class="msg" id="dobMsg"></p>
+
+        <!-- Mobile -->
+        <label for="mobile">Mobile Number</label>
+
+        <div class="mobile-row">
+            <span class="prefix">+91</span>
+
+            <input
+                type="tel"
+                id="mobile"
+                inputmode="numeric"
+                maxlength="10"
+                autocomplete="tel-national"
+                placeholder="XXXXXXXXXX"
+                required
+            />
+        </div>
+
+        <p class="msg" id="mobileMsg"></p>
+
+        <!-- Email OTP -->
+        <label for="otp">Email OTP</label>
+
+        <div class="otp-row">
+            <input
+                type="text"
+                id="otp"
+                inputmode="numeric"
+                maxlength="6"
+                autocomplete="one-time-code"
+                placeholder="------"
+                required
+            />
+
+            <button type="button" class="otp-btn" id="sendOtp">
+                Send OTP
+            </button>
+        </div>
+
+        <p class="msg" id="otpMsg"></p>
+
+        <!-- Password -->
+        <label for="password">Create Password</label>
+
+        <input
+            type="password"
+            id="password"
+            autocomplete="new-password"
+            placeholder="Create password"
+            required
+        />
+
+        <p class="hint">
+            At least 8 characters with uppercase, lowercase,
+            a number and a symbol.
+        </p>
+
+        <p class="msg" id="passMsg"></p>
+
+        <!-- Confirm Password -->
+        <label for="confirmPassword">Confirm Password</label>
+
+        <input
+            type="password"
+            id="confirmPassword"
+            autocomplete="new-password"
+            placeholder="Confirm password"
+            required
+        />
+
+        <p class="msg" id="confirmMsg"></p>
+
+        <!-- Show Password -->
+        <label class="show-password">
+            <input type="checkbox" id="showPassword">
+            Show Password
+        </label>
+
+        <!-- Register -->
+        <button type="submit" class="register-button">
+            Register
+        </button>
+
+        <!-- Login Link -->
+        <p class="login-link">
+            Already registered ?
+            <a href="admin_log.html"> Log In </a>
+        </p>
+
+    </form>
+
+    <script src="admin_reg.js"></script>
+
+</body>
+</html>

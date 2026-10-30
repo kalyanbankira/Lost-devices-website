@@ -1,0 +1,234 @@
+
+/* Reset */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body */
+
+body {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 25px 15px;
+    font-family: Arial, sans-serif;
+    background: #074c4d;
+}
+
+/* Registration Form */
+
+.register-form {
+    width: 100%;
+    max-width: 450px;
+    padding: 30px;
+    background: #fff;
+    border-radius: 15px;
+    box-shadow: 0 10px 35px rgba(0, 0, 0, 0.3);
+}
+
+/* Heading */
+
+.register-form h2 {
+    text-align: center;
+    color: #030f81;
+    font-size: 27px;
+    margin-bottom: 8px;
+}
+
+.sub {
+    text-align: center;
+    color: #000000;
+    font-size: 13px;
+    line-height: 1.5;
+    margin-bottom: 22px;
+}
+
+/* Labels */
+
+.register-form > label:not(.show-password) {
+    display: block;
+    margin-top: 15px;
+    margin-bottom: 7px;
+    font-size: 14px;
+    font-weight: 600;
+    color: #001486;
+}
+
+/* Input Fields */
+
+.register-form input:not([type="checkbox"]) {
+    width: 100%;
+    height: 43px;
+    padding: 10px 12px;
+    border: 1px solid #ccc;
+    border-radius: 7px;
+    outline: none;
+    font-size: 14px;
+    background: #F7F4ED;
+    transition: 0.3s;
+}
+
+.register-form input:focus {
+    border-color: #2563eb;
+    background: #fff;
+    box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.12);
+}
+
+/* Mobile Number */
+
+.mobile-row {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.prefix {
+    min-width: 52px;
+    height: 43px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid #d6bebe;
+    border-radius: 7px;
+    background: #eee;
+    font-weight: bold;
+}
+
+.mobile-row input {
+    flex: 1;
+    min-width: 0;
+}
+
+/* OTP */
+
+.otp-row {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.otp-row input {
+    flex: 1;
+    min-width: 0;
+}
+
+.otp-btn {
+    height: 43px;
+    padding: 0 13px;
+    border: none;
+    border-radius: 7px;
+    background: #0f766e;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+    white-space: nowrap;
+    transition: 0.3s;
+}
+
+.otp-btn:hover {
+    background: #115e59;
+}
+
+/* Password Hint */
+
+.hint {
+    margin-top: 6px;
+    color: #055b75;
+    font-size: 11px;
+    line-height: 1.5;
+}
+
+/* Show Password */
+
+.show-password {
+    display: flex;
+    align-items: center;
+    gap: 7px;
+    margin-top: 12px;
+    font-size: 13px;
+    color: #074d4d;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.show-password input {
+    cursor: pointer;
+}
+
+/* Messages */
+
+.msg {
+    min-height: 15px;
+    margin-top: 4px;
+    font-size: 12px;
+}
+
+.msg.error {
+    color: #dc2626;
+}
+
+.msg.success {
+    color: #15803d;
+}
+
+/* Register Button */
+
+.register-button {
+    width: 100%;
+    height: 46px;
+    margin-top: 22px;
+    border: none;
+    border-radius: 8px;
+    background: #2563eb;
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.register-button:hover {
+    background: #1d4ed8;
+    transform: translateY(-1px);
+}
+
+/* Login Link */
+
+.login-link {
+    text-align: center;
+    margin-top: 18px;
+    font-size: 13px;
+    color: #555;
+}
+
+.login-link a {
+    color: #2563eb;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.login-link a:hover {
+    text-decoration: underline;
+}
+
+/* Mobile Responsive */
+
+@media (max-width: 480px) {
+
+    .register-form {
+        padding: 22px 18px;
+    }
+
+    .register-form h2 {
+        font-size: 24px;
+    }
+
+    .otp-btn {
+        padding: 0 9px;
+        font-size: 12px;
+    }
+}
